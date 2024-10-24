@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".secondPage.ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/toolbar_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="profile_photo,hello,points_icon,points_label,points,notification,"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/profile_photo"
+            app:layout_constraintBottom_toBottomOf="@id/points"
+            app:layout_constraintEnd_toStartOf="@id/hello"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hello"
+            app:shapeAppearanceOverlay="@style/CircularImageViewStyle" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardBackgroundColor="@color/green"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+            app:layout_constraintEnd_toEndOf="@id/profile_photo"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1.5dp" />
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/hello_samuel"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/notification"
+            app:layout_constraintStart_toEndOf="@id/profile_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/points_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/points"
+            android:src="@drawable/points"
+            app:layout_constraintBottom_toBottomOf="@id/points"
+            app:layout_constraintEnd_toStartOf="@id/points"
+            app:layout_constraintStart_toStartOf="@id/hello"
+            app:layout_constraintTop_toBottomOf="@id/hello"
+            app:layout_constraintTop_toTopOf="@id/points" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center_vertical"
+            android:text="@string/_1600"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/points_label"
+            app:layout_constraintStart_toEndOf="@id/points_icon"
+            app:layout_constraintTop_toBottomOf="@id/hello" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/points_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:text="@string/points"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/hello"
+            app:layout_constraintStart_toEndOf="@id/points"
+            app:layout_constraintTop_toBottomOf="@id/hello" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/notification"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/notifications"
+            app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/hello"
+            app:layout_constraintTop_toTopOf="@id/profile_photo"
+            app:shapeAppearanceOverlay="@style/CircularImageViewStyle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stories_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/points"
+            tools:listitem="@layout/item_story" />
+
+
+        <TextView
+            android:id="@+id/upcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/upcoming"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/courses"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stories_recycler" />
+
+        <TextView
+            android:id="@+id/courses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/course_of_this_week"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/upcoming"
+            app:layout_constraintTop_toTopOf="@id/upcoming" />
+
+        <HorizontalScrollView
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/courses">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:checked="true"
+                    android:text="@string/all"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/chip_color"
+                    app:chipCornerRadius="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ui_ux"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/chip_color"
+                    app:chipCornerRadius="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/illustration"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/chip_color"
+                    app:chipCornerRadius="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3d_animation"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/chip_color"
+                    app:chipCornerRadius="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2d_animation"
+                    android:textColor="@color/chip_text_color"
+                    app:chipBackgroundColor="@color/chip_color"
+                    app:chipCornerRadius="8dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toTopOf="@id/indicatorLayout"
+            app:layout_constraintTop_toBottomOf="@id/chip_group" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indicatorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

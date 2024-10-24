@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MazaadyTask</string>
+    <string name="first_page">First Page</string>
+    <string name="second_page">Second Page</string>
+    <string name="main_category">Main Category</string>
+    <string name="subcategory">Sub Category</string>
+    <string name="loading_please_wait">Loading, Please Wait…</string>
+    <string name="search">Search</string>
+    <string name="no_matching_items_found">No matching items found.</string>
+    <string name="other">Other</string>
+    <string name="title_activity_second_page">SecondPageActivity</string>
+    <string name="title_home">Home</string>
+    <string name="dash">ـــ</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_profile">Profile</string>
+    <string name="messages_number">%d</string>
+    <string name="hello_samuel">Hello, Samuel!</string>
+    <string name="_1600">+1600 </string>
+    <string name="points">points</string>
+    <string name="upcoming">Upcoming </string>
+    <string name="course_of_this_week">course of this week</string>
+    <string name="all">All</string>
+    <string name="ui_ux">UI/UX</string>
+    <string name="illustration">Illustration</string>
+    <string name="_3d_animation">3D Animation</string>
+    <string name="_2d_animation">2D Animation</string>
+    <string name="free_e_book">Free e-book</string>
+    <string name="laurel_seilha">Laurel Seilha</string>
+    <string name="product_designer">Product Designer</string>
+    <string name="_6_lessons">6 lessons</string>
+    <string name="free">Free</string>
+    <string name="_5h_21m">5h 21m</string>
+    <string name="step_design_sprint_for_beginner">Step design sprint for \nbeginner</string>
+    <string name="submit">Submit</string>
+</resources>
